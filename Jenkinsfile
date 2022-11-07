@@ -29,7 +29,7 @@ pipeline{
             }
         }
 
-        stage('Run Jar') {
+        stage('Execute Jar') {
             steps {
                 sh './mvnw.cmd spring-boot:run'
             }
