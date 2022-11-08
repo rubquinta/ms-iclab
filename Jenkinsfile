@@ -12,26 +12,26 @@ pipeline{
         stage('Compile Code') {
             steps {
                 echo 'Compiling Code'
-                sh './mvnw.cmd clean compile -e'
+                sh './mvnw clean compile -e'
             }
         }
 
         stage('Test Code') {
             steps {
                 echo 'Testing Code'
-                sh './mvnw.cmd clean test -e'
+                sh './mvnw clean test -e'
             }
         }
 
         stage('Package') {
             steps {
-                sh './mvnw.cmd clean package -e'
+                sh './mvnw clean package -e'
             }
         }
 
         stage('Execute Jar') {
             steps {
-                sh './mvnw.cmd spring-boot:run'
+                sh './mvnw spring-boot:run'
             }
         }
     }
