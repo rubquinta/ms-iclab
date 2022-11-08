@@ -23,7 +23,7 @@ pipeline{
             }
         }
 
-        stage('Package') {
+        stage('Package Build') {
             steps {
                 sh './mvnw clean package -e'
             }
