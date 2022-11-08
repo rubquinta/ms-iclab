@@ -9,7 +9,7 @@ pipeline{
             }
         }
 
-        stage('Compile Code') {
+        stage('Compile') {
             steps {
                 echo "Compiling Code"
                 sh "./mvnw clean compile -e"
