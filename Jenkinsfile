@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent { docker 'maven:3.8.1-adoptopenjdk-11' }
 
     stages {                
         stage("Clean") {
@@ -7,9 +7,9 @@ pipeline{
                 cleanWs()
             }
         }
-
+        
         stage("Compile") {
-            agent { docker 'maven:3.8.1-adoptopenjdk-11' }
+            
             steps {
                 echo "Compiling Code"
                 sh "./mvnw clean compile -e"
